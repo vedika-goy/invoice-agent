@@ -1,0 +1,9 @@
+vendor_id,vendor_name,tax_id,status,currency,bank_account_last4,payment_terms_days,phone_on_file,remit_email
+V001,Greenfield Produce Co.,84-2716630,approved,USD,4821,30,(831) 555-0142,billing@greenfieldproduce.example
+V002,Summit Packaging LLC,91-3302518,approved,USD,7730,30,(510) 555-0177,ar@summitpackaging.example
+V003,Coastal Dairy Supply,77-1048826,approved,USD,1194,15,(707) 555-0119,accounts@coastaldairy.example
+V004,Northstar Office Supplies,26-5519043,approved,USD,3316,30,(408) 555-0163,billing@northstaroffice.example
+V005,Maple Street Bakery,47-8820157,approved,USD,6602,14,(510) 555-0128,hello@maplestreetbakery.example
+V006,Apex Cleaning Services,33-6071289,approved,USD,5058,30,(510) 555-0190,billing@apexcleaning.example
+V007,Ironbridge Equipment Corp.,58-2290471,approved,USD,9143,45,(209) 555-0155,receivables@ironbridge.example
+V008,Quickserve Vending,62-7713054,blocked,USD,2287,30,(925) 555-0131,ar@quickservevending.example

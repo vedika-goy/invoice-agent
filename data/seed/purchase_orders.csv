@@ -1,0 +1,25 @@
+po_number,po_line,vendor_id,item_code,description,unit_of_measure,quantity_ordered,quantity_received,unit_price,currency,status,requested_by,po_date
+PO-1950,1,V003,MLK-WH,"Whole milk, 1 gal",gal,160,160,3.85,USD,closed,Priya Nair (Dairy buyer),2026-09-01
+PO-1962,1,V001,TOM-25,"Roma tomatoes, 25 lb case",case,100,100,18.50,USD,closed,Marco Diaz (Produce buyer),2026-09-10
+PO-1975,1,V006,CLN-FL,"Floor cleaner concentrate, 4 x 1 gal case",case,40,40,24.00,USD,closed,Dana Whitfield (Facilities),2026-09-15
+PO-1981,1,V002,BOX-12,Corrugated shipping box 12x12x12,each,400,400,1.18,USD,closed,Sam Okafor (Warehouse),2026-09-20
+PO-1984,1,V004,PPR-LT,"Copy paper, letter, 10-ream case",case,30,30,42.00,USD,closed,Lena Park (Office manager),2026-09-25
+PO-1987,1,V005,BAK-SRD,Sourdough loaf,loaf,40,40,6.50,USD,open,Marco Diaz (Bakery buyer),2026-10-28
+PO-1987,2,V005,BAK-CRS,"Butter croissants, dozen",dozen,15,15,11.00,USD,open,Marco Diaz (Bakery buyer),2026-10-28
+PO-1987,3,V005,BAK-BGL,"Plain bagels, dozen",dozen,30,30,9.00,USD,open,Marco Diaz (Bakery buyer),2026-10-28
+PO-1990,1,V005,BAK-PLT,Assorted pastry platter,platter,20,20,38.00,USD,open,Marco Diaz (Bakery buyer),2026-10-01
+PO-1991,1,V005,BAK-PLT,Assorted pastry platter,platter,20,20,38.00,USD,open,Marco Diaz (Bakery buyer),2026-11-01
+PO-2033,1,V001,TOM-25,"Roma tomatoes, 25 lb case",case,80,80,18.50,USD,open,Marco Diaz (Produce buyer),2026-10-27
+PO-2033,2,V001,LET-24,"Romaine lettuce, 24 ct case",case,60,60,22.75,USD,open,Marco Diaz (Produce buyer),2026-10-27
+PO-2041,1,V001,ONI-10,"Yellow onions, 10 lb bag",bag,1000,600,4.20,USD,open,Marco Diaz (Produce buyer),2026-10-20
+PO-2050,1,V002,BOX-12,Corrugated shipping box 12x12x12,each,500,500,1.18,USD,open,Sam Okafor (Warehouse),2026-10-26
+PO-2050,2,V002,TAPE-48,"Packing tape, 48 mm roll",roll,120,120,2.35,USD,open,Sam Okafor (Warehouse),2026-10-26
+PO-2051,1,V002,BOX-18,Corrugated shipping box 18x18x18,each,300,300,1.92,USD,open,Sam Okafor (Warehouse),2026-10-29
+PO-2060,1,V003,MLK-WH,"Whole milk, 1 gal",gal,400,300,3.85,USD,open,Priya Nair (Dairy buyer),2026-10-05
+PO-2072,1,V004,PPR-LT,"Copy paper, letter, 10-ream case",case,40,40,42.00,USD,open,Lena Park (Office manager),2026-10-30
+PO-2072,2,V004,TNR-58X,Toner cartridge 58X,each,6,6,129.00,USD,open,Lena Park (Office manager),2026-10-30
+PO-2080,1,V006,CLN-FL,"Floor cleaner concentrate, 4 x 1 gal case",case,50,50,24.00,USD,open,Dana Whitfield (Facilities),2026-10-22
+PO-2080,2,V006,GLV-NT,"Nitrile gloves, box of 100",box,80,80,9.50,USD,open,Dana Whitfield (Facilities),2026-10-22
+PO-2090,1,V007,WIF-810,"Walk-in freezer unit, 8 x 10 ft",each,1,1,26800.00,USD,open,Raj Mehta (Store operations),2026-10-02
+PO-2090,2,V007,INST-WIF,Installation and commissioning,each,1,1,1450.00,USD,open,Raj Mehta (Store operations),2026-10-02
+PO-2095,1,V008,VND-SNK,Vending snack restock,each,1,1,350.00,USD,open,Sam Okafor (Warehouse),2026-10-15

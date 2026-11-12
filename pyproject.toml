@@ -1,0 +1,14 @@
+[project]
+name = "invoice-agent"
+version = "0.1.0"
+description = "Invoice processing from PDF to decision: AI reads, rules decide."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+# PyMuPDF's compiled bindings warn on import under Python 3.11+; harmless.
+filterwarnings = ["ignore:builtin type .* has no __module__ attribute:DeprecationWarning"]
+
+[tool.ruff]
+line-length = 120

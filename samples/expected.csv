@@ -1,0 +1,19 @@
+step,action,target,expected_outcome,expected_reason_codes,why
+1,process,happy_summit_packaging.pdf,approved,,"Clean invoice: matches PO-2050 line by line, and everything was received."
+2,process,happy_greenfield_freight.pdf,approved,UNPLANNED_CHARGE_ALLOWED,"The $40 freight isn't on the PO but is within the $75 allowance, so it is approved with a note."
+3,process,ec1_a_greenfield_600_bags.pdf,approved,,"EC-1 A: 600 bags billed, 600 received on PO-2041."
+4,process,ec1_b_greenfield_400_bags.pdf,on_hold,QUANTITY_NOT_RECEIVED,"EC-1 B: 600 already billed against 600 received, so these 400 haven't arrived. Receiving's job."
+5,log_receipt,PO-2041:1:400,,,Receiving logs the delivery of the other 400 bags.
+6,rerun,ec1_b_greenfield_400_bags.pdf,approved,,EC-1 B re-run: the 400 bags are now received.
+7,process,ec1_c_greenfield_150_bags.pdf,needs_review,PO_OVERBILLED,"EC-1 C: all 1,000 ordered bags are billed, so 150 more would over-bill the PO. Procurement's call."
+8,process,ec2_coastal_dairy_resend_scan.pdf,rejected,DUPLICATE_CONFIRMED,EC-2: '873' is the already-paid INV-00873 with the prefix and zeros dropped.
+9,process,ec2_coastal_dairy_same_amount.pdf,needs_review,POSSIBLE_DUPLICATE,"EC-2 variant: same vendor and amount as INV-00873, 15 days apart. A person decides."
+10,process,ec3_northstar_bank_change.pdf,on_hold,BANK_ACCOUNT_CHANGED,"EC-3: everything matches except the bank account, so Treasury verifies by phone."
+11,process,ec4_maple_bakery_scan_no_po.pdf,needs_review,NO_PO_LIKELY_PO_FOUND;PRICES_INCLUDE_TAX,"EC-4: no PO printed; PO-1987 is the only one that fits, so it is suggested but not used."
+12,use_suggested_po,ec4_maple_bakery_scan_no_po.pdf,approved,PRICES_INCLUDE_TAX,EC-4: the reviewer clicks Use this PO and every check passes.
+13,process,ec4_maple_bakery_scan_two_pos.pdf,needs_review,NO_PO_SEVERAL_POS_FIT;PRICES_INCLUDE_TAX,"EC-4 variant: PO-1990 and PO-1991 fit equally well, so neither is suggested."
+14,process,missing_invoice_number_summit.pdf,on_hold,MISSING_REQUIRED_FIELD,"No invoice number: held, with an email to the vendor drafted."
+15,process,credit_note_coastal_dairy.pdf,needs_review,CREDIT_NOTE,"A credit note is set against future payments, not paid out."
+16,process,price_rise_apex_cleaning.pdf,needs_review,PRICE_ABOVE_PO,"Floor cleaner billed at $24.82 against $24.00 on the PO (+3.4%, limit 2%)."
+17,process,over_limit_ironbridge.pdf,needs_review,OVER_APPROVAL_LIMIT,"$30,461.00 is over the $25,000 limit, so it needs a second approver."
+18,process,statement_apex_cleaning.pdf,rejected,NOT_AN_INVOICE,A statement of account is not a bill.

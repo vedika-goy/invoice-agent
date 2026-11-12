@@ -1,0 +1,146 @@
+{
+  "buyer_address_lines": ["Accounts Payable", "1200 Harbor Way", "Oakland, CA 94607"],
+  "vendors": {
+    "V001": {"printed_name": "Greenfield Produce Co.", "address_lines": ["4410 Valley Farm Rd", "Salinas, CA 93901"], "phone": "(831) 555-0142", "email": "billing@greenfieldproduce.example", "tax_id": "84-2716630", "bank_name": "Salinas Valley Bank", "bank_account_number": "3810 0472 4821", "accent_color": "#2f6b3b"},
+    "V002": {"printed_name": "Summit Packaging LLC", "address_lines": ["1880 Industrial Pkwy", "Hayward, CA 94545"], "phone": "(510) 555-0177", "email": "ar@summitpackaging.example", "tax_id": "91-3302518", "bank_name": "Bay Commerce Bank", "bank_account_number": "2290 1185 7730", "accent_color": "#8a4b14"},
+    "V003": {"printed_name": "Coastal Dairy Supply", "address_lines": ["92 Creamery Ln", "Petaluma, CA 94952"], "phone": "(707) 555-0119", "email": "accounts@coastaldairy.example", "tax_id": "77-1048826", "bank_name": "North Coast Credit Union", "bank_account_number": "6604 2219 1194", "accent_color": "#1f5a8a"},
+    "V004": {"printed_name": "Northstar Office Supplies", "address_lines": ["300 Market St, Suite 12", "San Jose, CA 95113"], "phone": "(408) 555-0163", "email": "billing@northstaroffice.example", "tax_id": "26-5519043", "bank_name": "Silicon Valley Trust", "bank_account_number": "7120 0384 3316", "accent_color": "#33337a"},
+    "V005": {"printed_name": "Maple Street Bakery", "address_lines": ["17 Maple St", "Alameda, CA 94501"], "phone": "(510) 555-0128", "email": "hello@maplestreetbakery.example", "tax_id": "47-8820157", "bank_name": "Island City Bank", "bank_account_number": "0318 7745 6602", "accent_color": "#7a3b2e"},
+    "V006": {"printed_name": "Apex Cleaning Services", "address_lines": ["2551 Commerce Ave", "Fremont, CA 94538"], "phone": "(510) 555-0190", "email": "billing@apexcleaning.example", "tax_id": "33-6071289", "bank_name": "Fremont Savings Bank", "bank_account_number": "4407 1290 5058", "accent_color": "#0f6e6e"},
+    "V007": {"printed_name": "Ironbridge Equipment Corp.", "address_lines": ["8800 Foundry Way", "Stockton, CA 95206"], "phone": "(209) 555-0155", "email": "receivables@ironbridge.example", "tax_id": "58-2290471", "bank_name": "Central Valley Bank", "bank_account_number": "8806 3317 9143", "accent_color": "#444444"}
+  },
+  "documents": [
+    {
+      "file_name": "happy_summit_packaging.pdf", "scenario": "Happy path: clean invoice matching PO-2050",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V002",
+      "invoice_number": "SP-3352", "invoice_date": "2026-11-03", "due_date": "2026-12-03", "po_number": "PO-2050",
+      "tax_rate_percent": "8.25", "prices_include_tax": false,
+      "lines": [
+        {"item_code": "BOX-12", "description": "Corrugated shipping box 12x12x12", "quantity": "500", "unit_price": "1.18"},
+        {"item_code": "TAPE-48", "description": "Packing tape, 48 mm roll", "quantity": "120", "unit_price": "2.35"}
+      ]
+    },
+    {
+      "file_name": "happy_greenfield_freight.pdf", "scenario": "Happy path with a $40 freight charge (within the $75 allowance)",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V001",
+      "invoice_number": "GP-10441", "invoice_date": "2026-11-02", "due_date": "2026-12-02", "po_number": "PO-2033",
+      "tax_rate_percent": null, "prices_include_tax": false, "shipping": "40.00", "shipping_label": "Freight",
+      "lines": [
+        {"item_code": "TOM-25", "description": "Roma tomatoes, 25 lb case", "quantity": "80", "unit_price": "18.50"},
+        {"item_code": "LET-24", "description": "Romaine lettuce, 24 ct case", "quantity": "60", "unit_price": "22.75"}
+      ]
+    },
+    {
+      "file_name": "ec1_a_greenfield_600_bags.pdf", "scenario": "EC-1 A: first of three invoices on PO-2041 (600 bags, all received)",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V001",
+      "invoice_number": "GP-10452", "invoice_date": "2026-11-04", "due_date": "2026-12-04", "po_number": "PO-2041",
+      "tax_rate_percent": null, "prices_include_tax": false,
+      "lines": [{"item_code": "ONI-10", "description": "Yellow onions, 10 lb bag", "quantity": "600", "unit_price": "4.20"}]
+    },
+    {
+      "file_name": "ec1_b_greenfield_400_bags.pdf", "scenario": "EC-1 B: 400 more bags, not yet received",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V001",
+      "invoice_number": "GP-10467", "invoice_date": "2026-11-06", "due_date": "2026-12-06", "po_number": "PO-2041",
+      "tax_rate_percent": null, "prices_include_tax": false,
+      "lines": [{"item_code": "ONI-10", "description": "Yellow onions, 10 lb bag", "quantity": "400", "unit_price": "4.20"}]
+    },
+    {
+      "file_name": "ec1_c_greenfield_150_bags.pdf", "scenario": "EC-1 C: 150 more bags, past the 1,000 ordered",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V001",
+      "invoice_number": "GP-10489", "invoice_date": "2026-11-09", "due_date": "2026-12-09", "po_number": "PO-2041",
+      "tax_rate_percent": null, "prices_include_tax": false,
+      "lines": [{"item_code": "ONI-10", "description": "Yellow onions, 10 lb bag", "quantity": "150", "unit_price": "4.20"}]
+    },
+    {
+      "file_name": "ec2_coastal_dairy_resend_scan.pdf", "scenario": "EC-2: paid invoice INV-00873 resent as a scan, numbered 873",
+      "layout": "classic", "is_scan": true, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V003",
+      "invoice_number": "873", "invoice_date": "2026-10-14", "due_date": "2026-10-29", "po_number": "PO-2060",
+      "tax_rate_percent": null, "prices_include_tax": false, "stamp": "SECOND NOTICE",
+      "lines": [{"item_code": "MLK-WH", "description": "Whole milk, 1 gal", "quantity": "150", "unit_price": "3.85"}]
+    },
+    {
+      "file_name": "ec2_coastal_dairy_same_amount.pdf", "scenario": "EC-2 variant: new number, same amount as INV-00873 within 30 days",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V003",
+      "invoice_number": "INV-00891", "invoice_date": "2026-10-29", "due_date": "2026-11-13", "po_number": "PO-2060",
+      "tax_rate_percent": null, "prices_include_tax": false,
+      "lines": [{"item_code": "MLK-WH", "description": "Whole milk, 1 gal", "quantity": "150", "unit_price": "3.85"}]
+    },
+    {
+      "file_name": "ec3_northstar_bank_change.pdf", "scenario": "EC-3: perfect PO match, but new bank details",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V004",
+      "invoice_number": "NS-88204", "invoice_date": "2026-11-05", "due_date": "2026-12-05", "po_number": "PO-2072",
+      "tax_rate_percent": "8.25", "prices_include_tax": false,
+      "vendor_overrides": {"bank_name": "Pacific Crest Bank", "bank_account_number": "5521 0093 9907", "phone": "(408) 555-0199"},
+      "notice": "Please note our new bank details, effective November 1, 2026. Kindly update your records and send all payments to the account below.",
+      "lines": [
+        {"item_code": "PPR-LT", "description": "Copy paper, letter, 10-ream case", "quantity": "40", "unit_price": "42.00"},
+        {"item_code": "TNR-58X", "description": "Toner cartridge 58X", "quantity": "6", "unit_price": "129.00"}
+      ]
+    },
+    {
+      "file_name": "ec4_maple_bakery_scan_no_po.pdf", "scenario": "EC-4: phone scan, no PO number, prices include tax",
+      "layout": "simple", "is_scan": true, "document_type": "invoice", "title": "Invoice", "vendor_id": "V005",
+      "invoice_number": "1187", "invoice_date": "2026-11-07", "due_date": "2026-11-21", "po_number": null,
+      "tax_rate_percent": "8.25", "prices_include_tax": true,
+      "lines": [
+        {"item_code": null, "description": "Sourdough loaves", "quantity": "40", "unit_price": "7.04"},
+        {"item_code": null, "description": "Butter croissants (dozen)", "quantity": "15", "unit_price": "11.91"},
+        {"item_code": null, "description": "Plain bagels (dozen)", "quantity": "30", "unit_price": "9.74"}
+      ]
+    },
+    {
+      "file_name": "ec4_maple_bakery_scan_two_pos.pdf", "scenario": "EC-4 variant: two identical monthly POs fit, so none is suggested",
+      "layout": "simple", "is_scan": true, "document_type": "invoice", "title": "Invoice", "vendor_id": "V005",
+      "invoice_number": "1192", "invoice_date": "2026-11-09", "due_date": "2026-11-23", "po_number": null,
+      "tax_rate_percent": "8.25", "prices_include_tax": true,
+      "lines": [{"item_code": null, "description": "Assorted pastry platters", "quantity": "20", "unit_price": "41.14"}]
+    },
+    {
+      "file_name": "missing_invoice_number_summit.pdf", "scenario": "No invoice number printed",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V002",
+      "invoice_number": null, "invoice_date": "2026-11-06", "due_date": "2026-12-06", "po_number": "PO-2051",
+      "tax_rate_percent": "8.25", "prices_include_tax": false,
+      "lines": [{"item_code": "BOX-18", "description": "Corrugated shipping box 18x18x18", "quantity": "300", "unit_price": "1.92"}]
+    },
+    {
+      "file_name": "credit_note_coastal_dairy.pdf", "scenario": "Credit note for spoiled milk",
+      "layout": "classic", "is_scan": false, "document_type": "credit_note", "title": "CREDIT NOTE", "vendor_id": "V003",
+      "invoice_number": "CN-0112", "invoice_date": "2026-11-04", "due_date": null, "po_number": null,
+      "tax_rate_percent": null, "prices_include_tax": false, "hide_bank_details": true,
+      "notice": "Credit for 10 gallons spoiled on delivery against invoice INV-00873.",
+      "lines": [{"item_code": "MLK-WH", "description": "Whole milk, 1 gal (spoiled on delivery)", "quantity": "10", "unit_price": "3.85"}]
+    },
+    {
+      "file_name": "price_rise_apex_cleaning.pdf", "scenario": "Floor cleaner billed 3.4% above the PO price",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V006",
+      "invoice_number": "AC-5604", "invoice_date": "2026-11-03", "due_date": "2026-12-03", "po_number": "PO-2080",
+      "tax_rate_percent": "8.25", "prices_include_tax": false,
+      "lines": [
+        {"item_code": "CLN-FL", "description": "Floor cleaner concentrate, 4 x 1 gal case", "quantity": "50", "unit_price": "24.82"},
+        {"item_code": "GLV-NT", "description": "Nitrile gloves, box of 100", "quantity": "80", "unit_price": "9.50"}
+      ]
+    },
+    {
+      "file_name": "over_limit_ironbridge.pdf", "scenario": "Over the $25,000 approval limit",
+      "layout": "classic", "is_scan": false, "document_type": "invoice", "title": "INVOICE", "vendor_id": "V007",
+      "invoice_number": "IB-24-0917", "invoice_date": "2026-10-30", "due_date": "2026-12-14", "po_number": "PO-2090",
+      "tax_rate_percent": "8.25", "prices_include_tax": false,
+      "lines": [
+        {"item_code": "WIF-810", "description": "Walk-in freezer unit, 8 x 10 ft", "quantity": "1", "unit_price": "26800.00"},
+        {"item_code": "INST-WIF", "description": "Installation and commissioning", "quantity": "1", "unit_price": "1450.00", "is_taxable": false}
+      ]
+    },
+    {
+      "file_name": "statement_apex_cleaning.pdf", "scenario": "A statement of account, not a bill",
+      "layout": "statement", "is_scan": false, "document_type": "statement", "title": "STATEMENT OF ACCOUNT", "vendor_id": "V006",
+      "invoice_number": null, "invoice_date": "2026-10-31", "due_date": null, "po_number": null,
+      "tax_rate_percent": null, "prices_include_tax": false,
+      "statement_entries": [
+        {"date": "2026-09-30", "reference": "AC-5521", "description": "Invoice", "amount": "1039.20"},
+        {"date": "2026-10-15", "reference": "AC-5577", "description": "Invoice", "amount": "486.40"},
+        {"date": "2026-10-30", "reference": "PMT-7781", "description": "Payment received, thank you", "amount": "-1039.20"}
+      ],
+      "lines": []
+    }
+  ]
+}

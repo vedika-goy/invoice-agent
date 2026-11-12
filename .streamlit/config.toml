@@ -1,0 +1,16 @@
+[theme]
+base = "light"
+primaryColor = "#3C5BD9"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F5F9"
+textColor = "#1F2330"
+
+[browser]
+gatherUsageStats = false
+
+[server]
+# Matches the intake limit (MAX_UPLOAD_SIZE_BYTES), so the uploader states the real limit.
+maxUploadSize = 10
+
+[client]
+toolbarMode = "viewer"
